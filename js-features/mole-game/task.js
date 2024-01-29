@@ -13,11 +13,17 @@ for (let holeIndex = 1; holeIndex < 10; holeIndex++) {
     counterLost++;
     lost.textContent = counterLost;
     }
+    if (counterDead === 10) {
+      alert("win");
+      counterDead = 0;
+      counterLost = 0;
+      dead.textContent = counterDead;
+    }
+    if (counterLost === 5) {
+      alert("game over");
+      counterDead = 0;
+      counterLost = 0;
+      lost.textContent = counterDead;
+    }
     });
-}
-if (counterDead == 3) {
-  alert("win");
-  counterDead = 0;
-  counterLost = 0;
-  dead.textContent = counterDead;
 }
